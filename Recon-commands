@@ -1,0 +1,44 @@
+https://miro.com/app/board/o9J_klSqCSY=/
+Recon/Scanning/Footprinting
+
+1. Host Discovery
+https://www.rubyguides.com/2012/02/cli-ninja-ping-sweep/
+
+linux ping sweep
+for i in {1..254} ;do (ping -c 1 192.168.1.$i | grep "bytes from" &) ;done
+for i in {1..254} ;do (ping -c 1 192.168.65.$i | grep "bytes from" &) ;done
+Windows ping sweep
+for /L %i in (1,1,255) do @ping -n 1 -w 200 192.168.1.%i > nul && echo 192.168.1.%i is up.
+
+2. Host Enumeration
+
+Scan script
+nmap -Pn 192.168.65.10 -p-  #Will scan all ports
+
+dynamic tunnels use -Pn
+
+3. Host Interrogation
+nmap -Pn -sV [IP] -p [ports]
+nmap -Pn --script {scriptname} 192.168.65.10 -p [ports]
+nmap -Pn -T5 --min-rate 9999 192.168.65.10 -p-
+
+/usr/share/nmap/scripts 
+ls /usr/share/nmap/scripts | grep -i ftp
+
+Credential Reuse
+
+student:password
+student:{random gen}
+
+
+Target Network
+
+Internet > DMZ > Intranet > Internal net
+
+tjhtgnbbgbgfbgdfnbg
+
+da8K8
+hQ7Ri
+z9H6W
+2sFSI
+da8K8hQ7Riz9H6W2sFSI

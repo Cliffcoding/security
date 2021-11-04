@@ -1,0 +1,22 @@
+Record deleted successfully
+Stack Number	Username	Password	lin.internet
+9	
+JACL-005-M	
+o3B1omp67u8faln	
+
+grey-box:
+10.50.41.203
+student
+o3B1omp67u8faln
+
+windows:
+10.50.37.157
+
+linux:
+ssh student@10.50.39.78 -X
+
+xfreerdp /v:10.50.37.157 /u:student /p:password /dynamic-resolution +clipboard
+
+
+uploads
+10.50.21.241/uploads
